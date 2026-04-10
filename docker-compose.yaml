@@ -1,0 +1,10 @@
+# Example minimalist docker-compose file for stackchecker
+services:
+  stackchecker:
+    container_name: stackchecker
+    image: ghcr.io/thecowan/stackchecker
+    ports:
+      - 7442:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /data/stacks:/stacks 
